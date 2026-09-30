@@ -1,0 +1,43 @@
+*{
+
+    margin: 0;
+    padding:0;
+    font-size:medium;
+    font-weight: normal;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+/* Header styles */
+#headerContainer > h1 {
+    font-size: xx-large;
+    font-weight: bolder;
+    color: blueviolet;
+}
+#headerContainer > small {
+    font-size: medium;
+    font-weight: light;
+}
+#headerContainer {
+    margin: 30px;
+    padding:20px;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    background-color: white;
+    text-align: center;
+}
+
+#formContainer {
+    margin: 30px;
+    padding:20px;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    background-color: white;
+    text-align: center;
+}
+
+#formContainer > button {
+    background-color: blueviolet;
+    border: none;
+    border-radius: 30px;
+}
