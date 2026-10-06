@@ -22,7 +22,7 @@
     margin: 30px;
     padding:20px;
     box-shadow: 3px 3px rgba(0, 0, 0, 0.5);
-    border-radius: 30px;
+    border-radius: 20px;
     background-color: white;
     text-align: center;
 }
@@ -31,13 +31,104 @@
     margin: 30px;
     padding:20px;
     box-shadow: 3px 3px rgba(0, 0, 0, 0.5);
-    border-radius: 30px;
+    border-radius: 20px;
     background-color: white;
-    text-align: center;
 }
 
-#formContainer > button {
+#formContainer> #studentForm>.input-field {
+    display: flex;
+    flex-direction: column;
+}
+
+#formContainer> #studentForm>.input-field> input {
+    padding: 5px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #555;
+    outline: none;
+}
+
+#formContainer> #studentForm>.input-field> input:focus {
+    border-color: blueviolet;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+#formContainer> #studentForm>:nth-last-child(1)> button {
+    margin: 10px;
+    align-items: center;
     background-color: blueviolet;
     border: none;
-    border-radius: 30px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    padding: 6px 12px;
+    font-size: 14px;
+}
+
+#formContainer > #studentForm > :nth-last-child(1) > button:focus {
+    box-shadow:
+    #d6d6e7 0 0 0 1.5px inset,
+    rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+    #d6d6e7 0 -3px 0 inset;
+}
+
+#formContainer> #studentForm>:nth-last-child(1)> button:hover {
+    box-shadow: 0 3px 6px rgba(45, 35, 66, 0.3);
+    transform: translateY(-1px);
+}
+
+#formContainer> #studentForm>:nth-last-child(1)> button:active {
+    box-shadow: 0 2px 4px rgba(45, 35, 66, 0.25);
+}
+
+#listContainer>.list-item>h2 {
+    font-size: large;
+    color: #2d3748;
+    margin-bottom: 8px;
+    font-family: sans-serif;
+}
+
+#listConatiner>.list-item>p {
+    font-size: 1rem;
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+#listContainer>.list-item> button {
+    background-color: blueviolet;
+    color: #ffffff;
+    padding: 5px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#listContainer {
+    display: flex;
+    grid-template-columns: repeat(12, 1fr,);
+}
+
+@media (width <= 320px){
+    #listContainer > .list-item{
+        grid-column: span 12;
+    }
+}
+
+@media (width > 1000px){
+    #listContainer > .list-item{
+        grid-column: span 2;
+    }
+}
+
+@media (width > 320px) and (width < 1000px){
+    #listContainer > .list-item{
+        grid-column: span 4;
+    }
 }
